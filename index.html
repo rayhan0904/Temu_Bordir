@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <meta name="description"
+        content="Temu Bordir - Jasa bordir profesional untuk logo, nama, emblem, seragam, kaos, polo shirt, jaket, topi, dan lainnya. Hasil bordir berkualitas, rapi, dan tahan lama. Konsultasi gratis hubungi kami.">
+    <meta name="keywords"
+        content="bordir, jasa bordir, bordir komputer, bordir logo, bordir seragam, bordir jaket, bordir topi, bordir kaos, bordir polo shirt, Temu Bordir, bordir murah, bordir bandung">
+    <meta name="author" content="Temu Bordir">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta property="og:title" content="Temu Bordir | Jasa Bordir Profesional & Berkualitas">
+    <meta property="og:description"
+        content="Jasa bordir profesional untuk logo, nama, emblem, seragam, kaos, polo shirt, jaket, topi, dan lainnya. Hasil rapi, detail, dan tahan lama.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://temubordir.com">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://temubordir.com">
+    <title>Temu Bordir | Jasa Bordir Profesional & Berkualitas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0a1928',
+                        'navy-light': '#1a2a3a',
+                        gold: '#E8B317',
+                        'gold-light': '#F5D978',
+                        cream: '#FFFBF5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-cream font-sans antialiased">
+
+    <!-- Splash Screen -->
+<div id="splash-screen">
+    <div class="splash-content">
+        <img src="images/Logo.png" alt="Temu Bordir" class="splash-logo-img">
+    </div>
+</div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+
+        <!-- Navbar -->
+        <nav class="bg-navy shadow-lg fixed w-full top-0 z-50 transition-all duration-300" id="navbar">
+            <div class="container mx-auto px-4 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="text-xl font-bold text-gold tracking-wide">
+                        <i class="fas fa-thread mr-2"></i>
+                        <span id="brand-name">Temu Bordir</span>
+                    </div>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center space-x-6">
+                        <a href="#dashboard" class="nav-link text-gray-300 hover:text-gold transition"
+                            data-key="nav-home">Beranda</a>
+                        <a href="#layanan" class="nav-link text-gray-300 hover:text-gold transition"
+                            data-key="nav-services">Layanan</a>
+                        <a href="#tentang" class="nav-link text-gray-300 hover:text-gold transition"
+                            data-key="nav-about">Tentang</a>
+                        <a href="#galeri" class="nav-link text-gray-300 hover:text-gold transition"
+                            data-key="nav-gallery">Galeri</a>
+                        <a href="#kontak" class="nav-link text-gray-300 hover:text-gold transition"
+                            data-key="nav-contact">Kontak</a>
+
+                        <!-- Language Selector -->
+                        <div class="relative">
+                            <button id="lang-btn"
+                                class="flex items-center gap-2 bg-gold/20 text-gold px-3 py-1 rounded-full hover:bg-gold/30 transition text-sm">
+                                <i class="fas fa-globe"></i>
+                                <span id="current-lang">ID</span>
+                                <i class="fas fa-chevron-down text-xs"></i>
+                            </button>
+                            <div id="lang-dropdown"
+                                class="absolute right-0 top-full mt-2 bg-white rounded-lg shadow-lg overflow-hidden hidden w-32 z-50">
+                                <button
+                                    class="lang-option w-full px-4 py-2 text-left hover:bg-gold/20 transition flex items-center gap-2 text-sm"
+                                    data-lang="id">
+                                    <img src="https://flagcdn.com/w20/id.png" class="w-5 h-3 object-cover"
+                                        alt="Indonesia"> Indonesia
+                                </button>
+                                <button
+                                    class="lang-option w-full px-4 py-2 text-left hover:bg-gold/20 transition flex items-center gap-2 text-sm"
+                                    data-lang="en">
+                                    <img src="https://flagcdn.com/w20/gb.png" class="w-5 h-3 object-cover"
+                                        alt="English"> English
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-gold text-2xl">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="hidden md:hidden mt-3 space-y-2 pb-2">
+                    <a href="#dashboard" class="nav-link block py-2 text-gray-300 hover:text-gold"
+                        data-key="nav-home">Beranda</a>
+                    <a href="#layanan" class="nav-link block py-2 text-gray-300 hover:text-gold"
+                        data-key="nav-services">Layanan</a>
+                    <a href="#tentang" class="nav-link block py-2 text-gray-300 hover:text-gold"
+                        data-key="nav-about">Tentang</a>
+                    <a href="#galeri" class="nav-link block py-2 text-gray-300 hover:text-gold"
+                        data-key="nav-gallery">Galeri</a>
+                    <a href="#kontak" class="nav-link block py-2 text-gray-300 hover:text-gold"
+                        data-key="nav-contact">Kontak</a>
+                    <div class="pt-2 border-t border-gray-700 flex gap-3">
+                        <button
+                            class="mobile-lang-option flex items-center gap-2 text-gray-300 hover:text-gold py-2 px-3 rounded-lg bg-navy-light text-sm"
+                            data-lang="id">
+                            <img src="https://flagcdn.com/w20/id.png" class="w-4 h-3 object-cover" alt="Indonesia"> ID
+                        </button>
+                        <button
+                            class="mobile-lang-option flex items-center gap-2 text-gray-300 hover:text-gold py-2 px-3 rounded-lg bg-navy-light text-sm"
+                            data-lang="en">
+                            <img src="https://flagcdn.com/w20/gb.png" class="w-4 h-3 object-cover" alt="English"> EN
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Floating WhatsApp Button -->
+        <a href="https://wa.me/6281234567890" target="_blank" class="whatsapp-float" aria-label="Hubungi via WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+
+        <main>
+            <!-- Dashboard Hero Section -->
+            <section id="dashboard" class="dashboard-section">
+                <div class="dashboard-bg-pattern"></div>
+                <div class="container mx-auto px-4">
+                    <div class="dashboard-grid">
+                        <div class="dashboard-content" data-aos="fade-right" data-aos-duration="1000">
+                            <h1 class="dashboard-title">
+                                <span data-key="hero-title1">Bordir Berkualitas</span>
+                                <span class="text-gold" data-key="hero-title2">Tinggi</span>
+                            </h1>
+                            <p class="dashboard-desc" data-key="hero-desc">
+                                Solusi bordir profesional untuk logo, nama, emblem, seragam, kaos, polo shirt, jaket,
+                                topi, dan berbagai kebutuhan lainnya. Hasil rapi, detail, dan tahan lama.
+                            </p>
+                            <div class="dashboard-buttons">
+                                <a href="#layanan" class="dashboard-btn-primary" data-key="hero-btn1">
+                                    <i class="fas fa-arrow-right mr-2"></i>Lihat Layanan
+                                </a>
+                                <a href="#kontak" class="dashboard-btn-secondary" data-key="hero-btn2">
+                                    <i class="fas fa-headset mr-2"></i>Konsultasi Gratis
+                                </a>
+                            </div>
+                            <div class="dashboard-stats">
+                                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                                    <span class="stat-number" id="stat-years">0</span>
+                                    <span class="stat-label">Tahun Pengalaman</span>
+                                </div>
+                                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                                    <span class="stat-number" id="stat-clients">0</span>
+                                    <span class="stat-label">Klien Puas</span>
+                                </div>
+                                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                                    <span class="stat-number" id="stat-projects">0</span>
+                                    <span class="stat-label">Proyek Selesai</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-image" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                            <div class="dashboard-image-wrapper">
+                                <div class="dashboard-image-glow"></div>
+                                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&h=500&fit=crop"
+                                    alt="Bordir Profesional" class="dashboard-image-main">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="dashboard-wave-bottom"></div>
+            </section>
+
+            <!-- Layanan Section -->
+            <section id="layanan" class="py-12 bg-cream">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-8" data-aos="fade-up">
+                        <span class="section-subtitle" data-key="services-subtitle">Our Services</span>
+                        <h2 class="section-title" data-key="services-title">Layanan Bordir Kami</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="services-grid">
+                        <div class="service-card" data-service="logo" data-aos="fade-up" data-aos-delay="0">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1581291518633-83b4ebd1d83e?w=300&h=200&fit=crop"
+                                    alt="Bordir Logo">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-paint-brush text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-logo">Bordir Logo</h3>
+                                <p class="service-desc" data-key="service-logo-desc">Logo perusahaan</p>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="nama" data-aos="fade-up" data-aos-delay="50">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=300&h=200&fit=crop"
+                                    alt="Bordir Nama">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-tag text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-name">Bordir Nama</h3>
+                                <p class="service-desc" data-key="service-name-desc">Nama custom</p>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="emblem" data-aos="fade-up" data-aos-delay="100">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1565084888279-aca0be0873e8?w=300&h=200&fit=crop"
+                                    alt="Bordir Emblem">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-crown text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-emblem">Bordir Emblem</h3>
+                                <p class="service-desc" data-key="service-emblem-desc">Emblem khas</p>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="seragam" data-aos="fade-up" data-aos-delay="150">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1581318694546-0d6e8ee1f736?w=300&h=200&fit=crop"
+                                    alt="Bordir Seragam">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-shirt text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-uniform">Bordir Seragam</h3>
+                                <p class="service-desc" data-key="service-uniform-desc">Seragam kantor</p>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="kaos" data-aos="fade-up" data-aos-delay="200">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop"
+                                    alt="Bordir Kaos">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-vest text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-tshirt">Bordir Kaos</h3>
+                                <p class="service-desc" data-key="service-tshirt-desc">Kaos distro</p>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="polo" data-aos="fade-up" data-aos-delay="250">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=300&h=200&fit=crop"
+                                    alt="Bordir Polo">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-user-tie text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-polo">Bordir Polo</h3>
+                                <p class="service-desc" data-key="service-polo-desc">Polo shirt</p>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="jaket" data-aos="fade-up" data-aos-delay="300">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=300&h=200&fit=crop"
+                                    alt="Bordir Jaket">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-thermometer-half text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-jacket">Bordir Jaket</h3>
+                                <p class="service-desc" data-key="service-jacket-desc">Jaket almamater</p>
+                            </div>
+                        </div>
+                        <div class="service-card" data-service="topi" data-aos="fade-up" data-aos-delay="350">
+                            <div class="service-image">
+                                <img src="https://images.unsplash.com/photo-1581263518545-13a9e4c1d2f2?w=300&h=200&fit=crop"
+                                    alt="Bordir Topi">
+                            </div>
+                            <div class="service-content">
+                                <i class="fas fa-hat-cowboy text-gold text-lg mb-1"></i>
+                                <h3 class="service-title" data-key="service-hat">Bordir Topi</h3>
+                                <p class="service-desc" data-key="service-hat-desc">Topi custom</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-6" data-aos="fade-up">
+                        <span class="text-navy text-sm">➕ Dan masih banyak lagi: Jas, Apron, Tas, Mukena, Handuk,
+                            dll</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Service Modal -->
+            <div id="service-modal" class="modal">
+                <div class="modal-container">
+                    <button id="close-modal" class="modal-close">
+                        <i class="fas fa-times"></i>
+                    </button>
+                    <div id="modal-content" class="modal-content-inner"></div>
+                </div>
+            </div>
+
+            <!-- Tentang Section -->
+            <section id="tentang" class="py-12 bg-white">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-8" data-aos="fade-up">
+                        <span class="section-subtitle" data-key="about-subtitle">About Us</span>
+                        <h2 class="section-title" data-key="about-title">Tentang Temu Bordir</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                        <p class="about-text" data-key="about-desc1">
+                            Temu Bordir hadir sejak <span class="text-gold font-semibold">2015</span> sebagai penyedia
+                            jasa bordir profesional di Indonesia.
+                            Kami mengkhususkan diri pada bordir komputer dengan hasil <span class="text-gold">rapi,
+                                detail, dan tahan lama</span>.
+                        </p>
+                        <p class="about-text" data-key="about-desc2">
+                            Didukung mesin bordir modern dan tim ahli berpengalaman, kami melayani berbagai kebutuhan
+                            bordir berkualitas terbaik.
+                        </p>
+                        <div class="vision-mission-grid">
+                            <div class="vision-card" data-aos="fade-right" data-aos-delay="200">
+                                <div class="vision-icon">
+                                    <i class="fas fa-eye text-gold"></i>
+                                    <h3 class="vision-title" data-key="vision-title">Visi</h3>
+                                </div>
+                                <p class="vision-text" data-key="vision-text">Mitra terpercaya bordir berkualitas tinggi
+                                    di Indonesia.</p>
+                            </div>
+                            <div class="mission-card" data-aos="fade-left" data-aos-delay="200">
+                                <div class="mission-icon">
+                                    <i class="fas fa-bullseye text-gold"></i>
+                                    <h3 class="mission-title" data-key="mission-title">Misi</h3>
+                                </div>
+                                <ul class="mission-list">
+                                    <li data-key="mission1">Hasil bordir berkualitas</li>
+                                    <li data-key="mission2">Kepuasan pelanggan</li>
+                                    <li data-key="mission3">Inovasi teknologi bordir</li>
+                                    <li data-key="mission4">Harga terjangkau</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Galeri Section - Slideshow Gallery (tanpa tombol next/prev) -->
+<section id="galeri" class="py-12 bg-cream gallery-slideshow-section">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-8" data-aos="fade-up">
+            <span class="section-subtitle" data-key="gallery-subtitle">Portfolio</span>
+            <h2 class="section-title" data-key="gallery-title">Galeri Hasil Bordir Customer</h2>
+            <div class="section-divider"></div>
+            <p class="text-gray-500 mt-2 text-sm">Kumpulan hasil karya bordir dari customer kami</p>
+        </div>
+
+        <!-- Slideshow Gallery (tanpa tombol) -->
+        <div class="gallery-slideshow-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="gallery-slideshow" id="gallery-slideshow">
+                <!-- Slides akan diisi JavaScript -->
+            </div>
+        </div>
+
+        <!-- Gallery Dots -->
+        <div class="gallery-dots" id="gallery-dots"></div>
+
+        <!-- Gallery Thumbnails -->
+        <div class="gallery-thumbnails" id="gallery-thumbnails"></div>
+
+        <!-- Image Modal -->
+        <div id="image-modal" class="image-modal">
+            <div class="image-modal-container">
+                <button id="close-image-modal" class="image-modal-close">
+                    <i class="fas fa-times-circle"></i>
+                </button>
+                <div class="image-modal-frame">
+                    <img id="modal-image" src="" alt="" class="image-modal-img">
+                </div>
+                <p id="modal-caption" class="image-modal-caption"></p>
+            </div>
+        </div>
+
+        <!-- Testimonials Slider/Carousel (tanpa tombol) -->
+            <div class="testimonials-section" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="testimonials-title" data-key="testimonials-title">Apa Kata Pelanggan Kami?</h3>
+            <div class="testimonials-slider-container">
+                <div class="testimonials-slider" id="testimonials-slider">
+                    <!-- Testimonial items akan diisi JavaScript -->
+                </div>
+            </div>
+            <div class="slider-dots" id="slider-dots"></div>
+        </div>
+    </div>
+</section>
+
+            <!-- Kontak Section -->
+            <section id="kontak" class="py-12 bg-navy">
+                <div class="container mx-auto px-4">
+                    <div class="text-center mb-8" data-aos="fade-up">
+                        <span class="section-subtitle text-gold" data-key="contact-subtitle">Get In Touch</span>
+                        <h2 class="section-title text-white" data-key="contact-title">Hubungi Kami</h2>
+                        <div class="section-divider bg-gold"></div>
+                        <p class="text-gray-300 mt-3 text-sm" data-key="contact-desc">Hubungi kami untuk konsultasi
+                            gratis dan pemesanan bordir</p>
+                    </div>
+
+                    <div class="contact-container" data-aos="fade-up" data-aos-duration="800">
+                        <!-- Maps -->
+                        <div class="contact-map-wrapper">
+                            <div class="contact-map-title">
+                                <i class="fas fa-map-marker-alt text-gold"></i>
+                                <span>Lokasi Kami</span>
+                            </div>
+                            <div class="contact-map">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.945251466563!2d107.609038!3d-6.917465!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7c8a7c9e6d9%3A0x5c8a7b9c6d5e4f3a!2sBandung!5e0!3m2!1sid!2sid!4v1700000000000!5m2!1sid!2sid"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen=""
+                                    loading="lazy"></iframe>
+                            </div>
+                        </div>
+
+                        <!-- Informasi Kontak dalam 1 Card -->
+                        <div class="contact-info-single-card">
+                            <div class="contact-info-header">
+                                <div class="contact-info-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <h3 class="contact-info-title-main" data-key="info-title">Informasi</h3>
+                            </div>
+                            <div class="contact-info-items">
+                                <div class="contact-info-item">
+                                    <div class="contact-info-item-icon">
+                                        <i class="fas fa-map-marker-alt text-gold"></i>
+                                    </div>
+                                    <div class="contact-info-item-content">
+                                        <h4 data-key="info-address">Alamat</h4>
+                                        <p>Jl. Bordir Raya No. 123, Bandung, Jawa Barat</p>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-item-icon">
+                                        <i class="fas fa-phone text-gold"></i>
+                                    </div>
+                                    <div class="contact-info-item-content">
+                                        <h4 data-key="info-phone">Telepon</h4>
+                                        <p>+62 812 3456 7890</p>
+                                        <p>+62 822 9876 5432</p>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-item-icon">
+                                        <i class="fas fa-envelope text-gold"></i>
+                                    </div>
+                                    <div class="contact-info-item-content">
+                                        <h4 data-key="info-email">Email</h4>
+                                        <p>info@temubordir.com</p>
+                                        <p>cs@temubordir.com</p>
+                                    </div>
+                                </div>
+                                <div class="contact-info-item">
+                                    <div class="contact-info-item-icon">
+                                        <i class="fas fa-clock text-gold"></i>
+                                    </div>
+                                    <div class="contact-info-item-content">
+                                        <h4 data-key="info-hours">Jam Operasional</h4>
+                                        <p>Senin - Sabtu: 09.00 - 17.00</p>
+                                        <p class="text-gold/70">Minggu & Libur: Tutup</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="contact-info-social">
+                                <p data-key="social-title">Ikuti Kami di Sosial Media</p>
+                                <div class="contact-social-icons">
+                                    <a href="https://instagram.com/temubordir" target="_blank"
+                                        class="social-icon instagram">
+                                        <i class="fab fa-instagram"></i>
+                                    </a>
+                                    <a href="https://tiktok.com/@temubordir" target="_blank" class="social-icon tiktok">
+                                        <i class="fab fa-tiktok"></i>
+                                    </a>
+                                    <a href="https://facebook.com/temubordir" target="_blank"
+                                        class="social-icon facebook">
+                                        <i class="fab fa-facebook-f"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="bg-navy-light border-t border-gold/20 py-5">
+                <div class="container mx-auto px-4 text-center">
+                    <div class="footer-links">
+                        <a href="#dashboard" class="footer-link" data-key="footer-home">Beranda</a>
+                        <a href="#layanan" class="footer-link" data-key="footer-services">Layanan</a>
+                        <a href="#tentang" class="footer-link" data-key="footer-about">Tentang</a>
+                        <a href="#galeri" class="footer-link" data-key="footer-gallery">Galeri</a>
+                        <a href="#kontak" class="footer-link" data-key="footer-contact">Kontak</a>
+                    </div>
+                    <p class="footer-copyright">&copy; 2024 Temu Bordir. All rights reserved. | Jasa Bordir Profesional
+                    </p>
+                </div>
+            </footer>
+        </main>
+
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/splash.js"></script>
+    <script src="scripts/counter.js"></script>
+    <script src="scripts/gallery.js"></script>
+    <script src="scripts/testimonials.js"></script>
+    <script src="scripts/navigation.js"></script>
+    <script src="scripts/modals.js"></script>
+    <script src="scripts/language.js"></script>
+    <script src="scripts/init.js"></script>
+</body>
+
+</html>
